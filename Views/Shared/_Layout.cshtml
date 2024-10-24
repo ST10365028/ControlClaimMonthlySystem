@@ -1,0 +1,88 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ControlClaim Monthly System</title>
+    <link rel="stylesheet" href="~/wwwroot/css/styles.css" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e8f0f2; /* Light background */
+            color: #2c3e50; /* Dark text color */
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #2980b9; /* Blue theme */
+            padding: 15px;
+            position: fixed; /* Fixed positioning */
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure it's above other content */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+            nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+            }
+
+                nav ul li {
+                    display: inline-block;
+                    margin-right: 30px;
+                }
+
+                    nav ul li a {
+                        color: #ecf0f1; /* Light text for contrast */
+                        font-weight: bold;
+                        text-decoration: none;
+                        font-size: 18px;
+                        transition: color 0.3s;
+                    }
+
+                        nav ul li a:hover {
+                            color: #f39c12; /* Warm hover color */
+                        }
+
+        .container {
+            padding: 80px 20px 20px; /* Added top padding to prevent overlap with the fixed nav */
+            max-width: 1200px;
+            margin: 0 auto; /* Centering the container */
+        }
+
+        footer {
+            background-color: #2980b9; /* Match nav color */
+            color: #ecf0f1;
+            text-align: center;
+            padding: 15px 0;
+            position: relative; /* Allows footer to stay in place */
+            bottom: 0;
+            width: 100%;
+            font-size: 14px;
+            margin-top: 20px; /* Spacing above footer */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/Home/Login">Login</a></li>
+            <li><a href="/Claim/Create">Create Claim</a></li>
+            <li><a href="/Claim/SubmitClaim">Submit Claim</a></li>
+            <li><a href="/Status/TrackStatus">Track Status</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer>
+        &copy; 2024 ControlClaim Monthly System. All rights reserved.
+    </footer>
+</body>
+</html>
+
